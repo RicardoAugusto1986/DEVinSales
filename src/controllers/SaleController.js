@@ -1,7 +1,7 @@
 const { literal } = require('sequelize');
 const { decode } = require("jsonwebtoken");
 const { validateErrors, daysToDelivery } = require('../utils/functions');
-
+const Logger = require("../config/logger");
 const salesRoutes = require('../routes/v1/sales.routes');
 
 const Sale = require('../models/Sale')
@@ -43,13 +43,16 @@ module.exports = {
         buyer_id: user_id,
         dt_sale: dt_sale
       })
+      Logger.info("Venda encontrada")
       return res.status(201).send({ 'created': "id-" + result.id })
 
     } catch (error) {
-      if (error.message.includes('sales_seller_id_fkey')) return res.status(404).send({ message: "seller_id inexistente" })
+      if (error.message.includes('sales_seller_id_fkey'))
+        Logger.error("seller_id não existe")
+        return res.status(404).send({ message: "seller_id inexistente" })
       if (error.message.includes('sales_buyer_id_fkey')) return res.status(404).send({ message: "buyer_id inexistente" })
       if (error.message.includes('invalid input syntax')) return res.status(400).send({ message: "User_id em formato inválido" })
-
+       Logger.error("Venda não encontrada ou não existe")
       res.status(400).send({ message: error.message })
     }
 
@@ -81,14 +84,20 @@ module.exports = {
         buyer_id: buyer_id,
         dt_sale: dt_sale
       })
+      Logger.info("Venda criada")
       return res.status(201).send({ 'created': "id-" + result.id })
 
     } catch (error) {
-
-      if (error.message.includes('sales_seller_id_fkey')) return res.status(404).send({ message: "seller_id inexistente" })
-      if (error.message.includes('sales_buyer_id_fkey')) return res.status(404).send({ message: "buyer_id inexistente" })
-      if (error.message.includes('invalid input syntax')) return res.status(400).send({ message: "User_id em formato inválido" })
-
+      Logger.error("erro ao criar a venda")
+      if (error.message.includes('sales_seller_id_fkey'))
+        
+        return res.status(404).send({ message: "seller_id inexistente" })
+      if (error.message.includes('sales_buyer_id_fkey'))
+        
+        return res.status(404).send({ message: "buyer_id inexistente" })
+      if (error.message.includes('invalid input syntax'))
+        return res.status(400).send({ message: "User_id em formato inválido" })
+      
       res.status(400).send({ message: error.message })
     }
   },
@@ -113,14 +122,17 @@ module.exports = {
       });
 
       if (!findUser) {
+        Logger.error("Usuario não existe")
         return res.status(400).send({ message: "Este usuario não existe!" });
       }
       if (findSaler.length === 0) {
+        Logger.info("Este usuario não possui vendas")
         return res.status(400).send({ message: "Este usuario não possui vendas!" });
       }
+      Logger.info("Venda Localizada")
       return res.status(200).json(findSaler)
     } catch (error) {
-
+      Logger.error("Houve um erro")
       return res.status(400).send({ message: "Erro deconhecido!" })
     }
   },
@@ -131,6 +143,7 @@ module.exports = {
       const sale_id = req.params.sale_id
 
       if (!sale_id) {
+        Logger.error("É necessário passar o ID de vendas")
         return res.status(400).send({ message: 'É necessário passar o ID de vendas' })
       }
 
@@ -166,6 +179,7 @@ module.exports = {
 
 
       if (!sale) {
+        Logger.error("Não existe venda para este ID")
         return res.status(404).send({ message: 'Não existe venda para este ID' })
       }
       const productIdList = sale.products.map(p => p.product_id)
@@ -194,10 +208,11 @@ module.exports = {
         dt_sale: sale.dt_sale,
         products: productsWithName
       }
-
+      Logger.info("Sucesso na requisição")
       return res.status(200).json(response)
 
     } catch (error) {
+      Logger.error("Não existe vendas para este id")
       return res.status(500).json(error.message)
     }
   },
@@ -223,14 +238,15 @@ module.exports = {
       });
 
       if (salesData.length == 0) {
+        Logger.error("erro ao encontarr dados")
         return res.status(204).json({ message: "no content" });
       }
-
+      Logger.info("Sucesso na requisição de encontarr compra")
       return res.status(200).json(salesData);
 
     } catch (error) {
-
-      return res.status(201).json({ message: "erro ao listar dados de vendas" });
+      Logger.error("erro ao listar dados de vendas")
+      return res.status(400).json({ message: "erro ao listar dados de vendas" });
     }
   },
 
@@ -297,9 +313,10 @@ module.exports = {
         sale_id: sale_id,
         delivery_forecast: deliverydate
       })
-
+      Logger.info("Entrega agendada com sucesso")
       return res.status(200).json({ message: "Entrega agendada com sucesso" });
     } catch (error) {
+      Logger.error("Erro na requisição")
       return res.status(400).json({ message: "Bad request" });
     }
 
@@ -356,6 +373,7 @@ module.exports = {
 
       const validSellerId = await User.findByPk(seller_id);
       if (!validSellerId) {
+      Logger.error("seller_id não existe")
         return res.status(404).send({ message: "seller_id não existe" });
       }
 
@@ -378,8 +396,10 @@ module.exports = {
           amount: amount,
         },
       });
+      Logger.info("Venda registrada")
       return res.status(201).json({ 'created': "id-" + productSale.id });
     } catch (error) {
+      Logger.info("Erro ao registrar")
       return res.status(400).send(error.message);
     }
   },
