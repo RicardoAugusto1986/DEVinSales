@@ -4,6 +4,7 @@ const City = require('../models/City')
 const State = require('../models/State')
 const { validateErrors } = require('../utils/functions')
 const { Op } = require("sequelize");
+const Logger = require("../config/logger");
 
 module.exports = {
 
@@ -80,11 +81,14 @@ module.exports = {
           description: 'Endereço encontrado com sucesso!',
           schema: { $ref: "#/definitions/GetAddress" }
         } */
+        Logger.info("Endereço encontrado com sucesso!")
         return res.status(200).json({ message: "Endereço encontrado com sucesso!", address });
+        
       }
     } catch (error) {
       const message = validateErrors(error);
       // #swagger.responses[403] = { description: 'Você não tem autorização para este recurso!' }
+      Logger.error("Erro na requisição")
       return res.status(403).send(message);
     }
   },
@@ -118,6 +122,7 @@ module.exports = {
 
       if (!address) {
         // #swagger.responses[404] = { description: 'Endereço não localizado!' }
+        Logger.error("Endereço não localizado!")
         return res.status(404).json({ message: "Endereço não localizado!" });
       }
 
@@ -142,7 +147,7 @@ module.exports = {
       )
 
       // #swagger.responses[200] = { description: 'Endereço alterado com sucesso!' }
-
+      Logger.info("Endereço alterado com sucesso!")
       return res.status(200).json({ message: "Endereço alterado com sucesso!" });
 
     } catch (error) {
@@ -164,8 +169,9 @@ module.exports = {
 
       if (!address) {
         //#swagger.responses[404] = {description: 'Not Found'}
+        Logger.error("Endereço não encontrado!")
 
-        return res.status(404).send({ message: 'Endreço não encontrado.' });
+        return res.status(404).send({ message: 'Endereço não encontrado.' });
       }
 
       const deliveryUsing = await Deliveries.findAll({
@@ -176,18 +182,19 @@ module.exports = {
 
       if (deliveryUsing.length > 0) {
         //#swagger.response[400] = {description: 'Bad Request'}
-
+        Logger.info("Endereço em uso. Não pode ser deletado.")
         return res
           .status(400)
           .send({ message: 'Endereço em uso. Não pode ser deletado.' });
       }
 
       await address.destroy();
-      console.log('DESTROYED');
+      
       //#swagger.response[204] = {description: 'No Content' }
+      Logger.info("Endereço deletado com sucesso")
       return res.status(204).send();
     } catch (error) {
-      console.log(error);
+      
       const message = validateErrors(error);
       return res.status(400).send({ message: message });
     }
@@ -259,6 +266,7 @@ module.exports = {
       });
 
       if (state.length === 0) {
+        Logger.error("Endereço não encontrado")
         return res.status(404).send({ message: "Couldn't find any state with the given 'state_id'" })
       }
 
@@ -270,6 +278,7 @@ module.exports = {
         return res.status(404).send({ message: "Couldn't find any city with the given 'city_id'" })
       }
       if (city[0].state_id !== state[0].id) {
+        Logger.error("Cidade não localizada")
         return res.status(400).send({ message: "The 'city_id' returned a city that doesn't match with the given 'state_id'" })
       }
       const addressObjKeys = ['street', 'number', 'cep']
@@ -343,6 +352,7 @@ module.exports = {
         };
 
       const address = await Address.create(newAddress)
+      Logger.info("Endereço adicionado")
       return res.status(201).send({ address_id: address.id });
 
     } catch (error) {
