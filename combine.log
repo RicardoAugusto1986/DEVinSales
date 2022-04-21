@@ -330,3 +330,37 @@
 21-04-2022 11:36:56 - [32minfo[39m: [32mPermissão criado com sucesso.[39m
 21-04-2022 11:38:51 - [32minfo[39m: [32mAplicação online[39m
 21-04-2022 11:39:50 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 19:46:32 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 19:46:43 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 6.467 ms[39m
+[35m[39m
+21-04-2022 19:46:43 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 304 - - 4.145 ms[39m
+[35m[39m
+21-04-2022 19:46:43 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 0.484 ms[39m
+[35m[39m
+21-04-2022 19:46:43 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 304 - - 10.188 ms[39m
+[35m[39m
+21-04-2022 19:46:43 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 304 - - 6.821 ms[39m
+[35m[39m
+21-04-2022 19:46:44 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 0.939 ms[39m
+[35m[39m
+21-04-2022 19:46:44 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 1.630 ms[39m
+[35m[39m
+21-04-2022 19:47:42 - [32minfo[39m: [32mAcesso liberado[39m
+21-04-2022 19:48:32 - [32minfo[39m: [32mUsuario cadastrado com sucesso[39m
+21-04-2022 19:49:10 - [31merror[39m: [31merro ao criar cargo.[39m
+21-04-2022 19:49:28 - [32minfo[39m: [32mAcesso liberado[39m
+21-04-2022 19:50:59 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 19:51:00 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 5.408 ms[39m
+[35m[39m
+21-04-2022 19:51:00 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 304 - - 6.853 ms[39m
+[35m[39m
+21-04-2022 19:51:00 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 1.050 ms[39m
+[35m[39m
+21-04-2022 19:51:00 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 304 - - 6.458 ms[39m
+[35m[39m
+21-04-2022 19:51:00 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 304 - - 1.070 ms[39m
+[35m[39m
+21-04-2022 19:51:00 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 2.992 ms[39m
+[35m[39m
+21-04-2022 19:51:01 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 1.749 ms[39m
+[35m[39m
