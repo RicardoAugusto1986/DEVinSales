@@ -6,9 +6,12 @@ require('./database')
 const swaggerUI = require('swagger-ui-express')
 const swaggerFile = require('./swagger.json')
 const Logger = require('./config/logger')
-
+const morgan = require('./config/morgan')
+app.use(morgan)
 app.use(express.json())
 app.use(routes)
+
 app.use('/api/v1/docs', swaggerUI.serve, swaggerUI.setup(swaggerFile))
+
 Logger.info('Aplicação online')
 app.listen(PORT, () => console.log(`Executando na porta ${PORT}`)) 
