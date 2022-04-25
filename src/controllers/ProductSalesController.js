@@ -3,6 +3,7 @@ const Product = require('../models/Product')
 const ProductsSales = require('../models/ProductsSales')
 const { Op } = require("sequelize");
 const { validateErrors } = require("../utils/functions");
+const Logger = require("../config/logger");
 
 
 module.exports = {
@@ -61,14 +62,17 @@ module.exports = {
         }
       })
       if (!saleResult || !productResult) {
+        Logger.error("id de Produto ou de Venda não existem")
         return res.status(404).send({ message: "id de Produto ou de Venda não existem" });
 
       } else {
 
         if (productSaleResult[0].dataValues.product_id !== Number(product_id)) {
+          Logger.error("Id do produto enviado não é compatível ao cadastrado na venda.")
           return res.status(400).send({ message: "Id do produto enviado não é compatível ao cadastrado na venda." });
         } else {
           if (price <= 0 || isNaN(price)) {
+            Logger.error("Preço deve ser um número superior à zero")
             return res.status(400).send({ message: "Preço deve ser um número superior à zero" });
           }
           const id = Number(productSaleResult[0].dataValues.id)
@@ -77,6 +81,7 @@ module.exports = {
             { unit_price: Number(price) },
             { where: { id: id } }
           )
+          Logger.info("Sucesso na requição")
           return res.status(204).send();
 
         }
@@ -85,6 +90,7 @@ module.exports = {
 
     } catch (error) {
       const message = validateErrors(error);
+Logger.error("sales_id não existe")
       return res.status(400).send(message);
     }
   },
@@ -139,16 +145,19 @@ module.exports = {
           }
         }
       })
-        if(!saleResult || !productResult){ //confere se id de Venda e de Produto existem no banco
+      if (!saleResult || !productResult) { //confere se id de Venda e de Produto existem no banco
+          Logger.error("id de Produto ou de Venda não existem")
         return res.status(404).send({ message: "id de Produto ou de Venda não existem" });
 
       }else{
 
         if(productSaleResult[0].dataValues.product_id!==Number(product_id)){ //confere se Produto repassado no Params é o mesmo cadastrado na Venda 
-          return res.status(400).send({message:"Id do produto enviado não é compatível ao cadastrado na venda."});
+          Logger.error("Id do produto enviado não é compatível ao cadastrado na venda.")
+          return res.status(400).send({ message: "Id do produto enviado não é compatível ao cadastrado na venda." });
         }else {
           if(amount<=0||isNaN(amount)){ //confere se Produto repassado no Params é o mesmo cadastrado na Venda 
-            return res.status(400).send({message:"Quantidade deve ser um número superior à zero"});
+            Logger.error("Quantidade deve ser um número superior à zero")
+            return res.status(400).send({ message: "Quantidade deve ser um número superior à zero" });
           }
           const id = Number(productSaleResult[0].dataValues.id)
 
@@ -156,7 +165,7 @@ module.exports = {
             {amount: Number(amount)},
             {where: {id: id}}
           )
-
+Logger.info("Sucesso na requisição")
         return res.status(204).send();
         }
       }
@@ -164,6 +173,7 @@ module.exports = {
 
     } catch (error) {
       const message = validateErrors(error);
+      Logger.info("Erro desconhecido")
       return res.status(400).send(message);
     }
   },

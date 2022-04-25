@@ -1,6 +1,8 @@
 const { validateErrors } = require("../utils/functions");
 const UserServices = require("../services/user.service");
+const User = require("../models/User");
 
+const Logger = require("../config/logger");
 
 module.exports = {
   async create(req, res) {
@@ -25,6 +27,7 @@ module.exports = {
           }
         */
     try {
+      
       const { name, password, email, birth_date, roles } = req.body;
       const user = await UserServices.createUser(
         name,
@@ -40,8 +43,14 @@ module.exports = {
           }
         }
       */
+      
+      Logger.info(`Usuario cadastrado com sucesso`)
+
       return res.status(201).send({ response: user.id });
     } catch (error) {
+
+      Logger.error(`Erro na aplicação`)
+
       const message = validateErrors(error);
       /*
               #swagger.responses[400] = {
@@ -53,6 +62,8 @@ module.exports = {
       return res.status(400).send(message);
     }
   },
+
+
   async session(req, res) {
     /*
          #swagger.tags = ['Usuário']
@@ -82,9 +93,10 @@ module.exports = {
       const token = await UserServices.beginSession(email, password);
 
       if (token.error) throw new Error(token.error);
-
+      Logger.info("Acesso liberado")
       return res.status(201).send({ token: token });
     } catch (error) {
+      Logger.error("Email ou senha inválidos")
       const message = validateErrors(error);
       return res.status(400).send(message);
     }
@@ -113,18 +125,23 @@ module.exports = {
           }
         */
     try {
-      const { name, birth_date_min, birth_date_max } = req.query;
 
+      
+      const { name, birth_date_min, birth_date_max } = req.query;
+      
+     
       const users = await UserServices.getUsers(
         name,
         birth_date_min,
         birth_date_max
       );
+     
       if (users.error) {
         throw new Error(users.error);
       }
 
       if (users.length === 0) {
+        Logger.info("Usuario encontrado")
         return res.status(204).send();
       }
       /*
@@ -134,7 +151,7 @@ module.exports = {
         }
       }
       */
-
+      
       return res.status(200).send({ users });
     } catch (error) {
       const message = validateErrors(error);
@@ -145,10 +162,13 @@ module.exports = {
        }
      }
      */
-
+     Logger.error("Erro na requisição ou usuario inexistente")
       return res.status(400).send(message);
     }
   },
+
+
+
   async delete(req, res) {
     // #swagger.tags = ['Usuário']
     // #swagger.description = 'Endpoint para deletar um usuário.'
@@ -187,9 +207,10 @@ module.exports = {
       if (message.error) {
         throw new Error(message.error);
       }
-
+      Logger.info("Usuario deletado com sucesso")
       return res.status(200).json({ message });
     } catch (error) {
+      Logger.error("Usuario não encontrado")
       return res.status(400).json({ error: error.message });
     }
   },

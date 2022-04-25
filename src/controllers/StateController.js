@@ -3,6 +3,7 @@ const City = require("../models/City");
 const { validateErrors } = require("../utils/functions");
 const { ACCENT, UNNACENT } = require("../utils/constants/accents");
 const { Op, where, fn, col } = require("sequelize");
+const Logger = require("../config/logger");
 
 module.exports = {
   async index(req, res) {
@@ -56,8 +57,10 @@ module.exports = {
           ).values(),
         ];
         if (filteredStates.length === 0) {
+          
           return res.status(204).send();
         } else {
+          
           return res.status(200).send(filteredStates);
         }
       }
@@ -68,11 +71,13 @@ module.exports = {
           return res.status(204).send();
         }
         else {
+          Logger.info("Sucesso na requisição de trazer os endereços do banco")
           return res.status(200).send({ states });
         }
       }
     } catch (error) {
       const message = validateErrors(error);
+      Logger.error("erro na requisição")
       return res.status(400).send(message);
     }
   },
@@ -102,16 +107,19 @@ module.exports = {
       });
 
       if (state.length === 0) {
+        Logger.error("Não existe estado com este id")
         return res
           .status(404)
           .send({
             message: "Couldn't find any state with the given 'state_id'",
           });
       } else {
+        Logger.info("Sucesso na requisição de trazer o estado pelo id")
         return res.status(200).send(state[0]);
       }
     } catch (error) {
       const message = validateErrors(error);
+      Logger.error("erro na requisição")
       return res.status(400).send(message);
     }
   },
@@ -132,6 +140,7 @@ module.exports = {
       });
 
       if (!state) {
+        Logger.error("Estado não encontrado")
         return res.status(404).json({ message: "Estado não encontrado." });
       }
 
@@ -165,10 +174,11 @@ module.exports = {
       if (!cities.length) {
         return res.status(204).json({});
       }
-
+      Logger.info(`Cidades trazido com sucesso`)
       return res.status(200).json({ cities });
     } catch (error) {
       const message = validateErrors(error);
+      Logger.error("erro na requisição de trazer cidade")
       return res.status(400).send(message);
     }
   },
@@ -229,6 +239,7 @@ module.exports = {
       });
 
       if (city) {
+        Logger.error("Ja existe esta cidade neste estado")
         return res
           .status(400)
           .send({
@@ -240,9 +251,11 @@ module.exports = {
         name,
         state_id,
       });
+      Logger.info("Adicionado cidade no estado requerido")
       return res.status(201).send({ city: newCity.id });
     } catch (error) {
       const message = validateErrors(error);
+      Logger.error("erro na requisição")
       return res.status(403).send(message);
     }
   }
