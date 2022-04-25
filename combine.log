@@ -407,3 +407,172 @@
 [35m[39m
 21-04-2022 19:51:42 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 0.559 ms[39m
 [35m[39m
+21-04-2022 20:40:38 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:40:43 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 4.543 ms[39m
+[35m[39m
+21-04-2022 20:40:43 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 200 143980 - 4.248 ms[39m
+[35m[39m
+21-04-2022 20:40:43 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 0.682 ms[39m
+[35m[39m
+21-04-2022 20:40:43 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 200 339540 - 11.910 ms[39m
+[35m[39m
+21-04-2022 20:40:43 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 200 1095130 - 13.490 ms[39m
+[35m[39m
+21-04-2022 20:40:44 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 200 628 - 2.061 ms[39m
+[35m[39m
+21-04-2022 20:40:44 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 3.349 ms[39m
+[35m[39m
+21-04-2022 20:43:20 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:43:23 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 5.804 ms[39m
+[35m[39m
+21-04-2022 20:43:23 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 200 143980 - 8.777 ms[39m
+[35m[39m
+21-04-2022 20:43:23 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 0.622 ms[39m
+[35m[39m
+21-04-2022 20:43:23 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 200 339540 - 8.885 ms[39m
+[35m[39m
+21-04-2022 20:43:23 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 200 1095130 - 20.354 ms[39m
+[35m[39m
+21-04-2022 20:43:23 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 200 628 - 9.060 ms[39m
+[35m[39m
+21-04-2022 20:43:23 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 2.195 ms[39m
+[35m[39m
+21-04-2022 20:44:06 - [32minfo[39m: [32mAcesso liberado[39m
+21-04-2022 20:44:34 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:44:37 - [32minfo[39m: [32mAcesso liberado[39m
+21-04-2022 20:45:07 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:45:23 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:45:25 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 4.976 ms[39m
+[35m[39m
+21-04-2022 20:45:25 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 304 - - 7.209 ms[39m
+[35m[39m
+21-04-2022 20:45:25 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 304 - - 8.437 ms[39m
+[35m[39m
+21-04-2022 20:45:25 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 0.592 ms[39m
+[35m[39m
+21-04-2022 20:45:25 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 304 - - 4.712 ms[39m
+[35m[39m
+21-04-2022 20:45:25 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 1.718 ms[39m
+[35m[39m
+21-04-2022 20:45:25 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 1.001 ms[39m
+[35m[39m
+21-04-2022 20:45:34 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:45:45 - [32minfo[39m: [32mAcesso liberado[39m
+21-04-2022 20:46:01 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:46:02 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 4.495 ms[39m
+[35m[39m
+21-04-2022 20:46:02 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 304 - - 6.473 ms[39m
+[35m[39m
+21-04-2022 20:46:02 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 304 - - 9.276 ms[39m
+[35m[39m
+21-04-2022 20:46:02 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 0.505 ms[39m
+[35m[39m
+21-04-2022 20:46:02 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 304 - - 4.194 ms[39m
+[35m[39m
+21-04-2022 20:46:02 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 0.662 ms[39m
+[35m[39m
+21-04-2022 20:46:03 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 0.823 ms[39m
+[35m[39m
+21-04-2022 20:47:18 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:47:21 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 5.329 ms[39m
+[35m[39m
+21-04-2022 20:47:21 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 304 - - 9.279 ms[39m
+[35m[39m
+21-04-2022 20:47:21 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 304 - - 9.042 ms[39m
+[35m[39m
+21-04-2022 20:47:21 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 0.664 ms[39m
+[35m[39m
+21-04-2022 20:47:21 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 304 - - 4.840 ms[39m
+[35m[39m
+21-04-2022 20:47:22 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 2.601 ms[39m
+[35m[39m
+21-04-2022 20:47:22 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 0.652 ms[39m
+[35m[39m
+21-04-2022 20:53:47 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:53:57 - [32minfo[39m: [32mAcesso liberado[39m
+21-04-2022 20:53:57 - [35mhttp[39m: [35mPOST /api/v1/session 201 211 - 412.478 ms[39m
+[35m[39m
+21-04-2022 20:54:03 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 4.999 ms[39m
+[35m[39m
+21-04-2022 20:54:03 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 304 - - 8.611 ms[39m
+[35m[39m
+21-04-2022 20:54:03 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 304 - - 7.941 ms[39m
+[35m[39m
+21-04-2022 20:54:03 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 9.100 ms[39m
+[35m[39m
+21-04-2022 20:54:03 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 304 - - 13.182 ms[39m
+[35m[39m
+21-04-2022 20:54:03 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 0.933 ms[39m
+[35m[39m
+21-04-2022 20:54:03 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 2.279 ms[39m
+[35m[39m
+21-04-2022 20:54:24 - [32minfo[39m: [32mAplicação online[39m
+21-04-2022 20:54:32 - [35mhttp[39m: [35mDELETE /api/v1/user/12 403 61 - 7.677 ms[39m
+[35m[39m
+22-04-2022 20:16:08 - [35mhttp[39m: [35mDELETE /api/v1/user/12 403 61 - 52.174 ms[39m
+[35m[39m
+22-04-2022 20:16:20 - [35mhttp[39m: [35mPOST /api/v1/roles 403 61 - 85.634 ms[39m
+[35m[39m
+25-04-2022 13:09:00 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:10:51 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:30:12 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:30:12 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:30:44 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:30:52 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:30:52 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:31:58 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:31:58 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:32:49 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:32:49 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:32:56 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:32:56 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:33:06 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:33:06 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:33:13 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:33:13 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:33:48 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:34:02 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:34:02 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:34:12 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:34:12 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:34:38 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:34:39 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:34:59 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:34:59 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:35:05 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:35:05 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:36:20 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:36:20 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:36:29 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:36:29 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:43:35 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:43:35 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:43:48 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:43:48 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:43:53 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:43:53 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:43:57 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:43:57 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:44:02 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:44:02 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:44:13 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:44:13 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:44:54 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:44:54 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:45:13 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:45:13 - [32minfo[39m: [32mAplicação online[39m
+25-04-2022 13:45:31 - [32minfo[39m: [32mAcesso liberado[39m
+25-04-2022 13:45:31 - [35mhttp[39m: [35mPOST /api/v1/session 201 211 - 555.873 ms[39m
+[35m[39m
+25-04-2022 13:45:45 - [31merror[39m: [31mEmail ou senha inválidos[39m
+25-04-2022 13:45:45 - [35mhttp[39m: [35mPOST /api/v1/session 400 39 - 151.291 ms[39m
+[35m[39m
+25-04-2022 13:50:06 - [31merror[39m: [31mEmail ou senha inválidos[39m
+25-04-2022 13:50:06 - [35mhttp[39m: [35mPOST /api/v1/session 400 39 - 121.873 ms[39m
+[35m[39m
+25-04-2022 13:50:08 - [31merror[39m: [31mEmail ou senha inválidos[39m
+25-04-2022 13:50:08 - [35mhttp[39m: [35mPOST /api/v1/session 400 39 - 42.742 ms[39m
+[35m[39m
+25-04-2022 13:50:09 - [31merror[39m: [31mEmail ou senha inválidos[39m
+25-04-2022 13:50:09 - [35mhttp[39m: [35mPOST /api/v1/session 400 39 - 42.823 ms[39m
+[35m[39m
