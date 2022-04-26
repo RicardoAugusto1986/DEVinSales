@@ -12,6 +12,7 @@ const morgan = require('./config/morgan')
 app.use(morgan)
 app.use(express.json())
 app.use(routes)
+require("dotenv").config();
 
 app.use('/api/v1/docs', swaggerUI.serve, swaggerUI.setup(swaggerFile))
 
@@ -20,7 +21,7 @@ app.use(Sentry.Handlers.requestHandler());
 app.use(Sentry.Handlers.tracingHandler());
 
 Sentry.init({
-    dsn: "https://fb6098cf4e4b498cb31adf27e4c07163@o1219519.ingest.sentry.io/6362015",
+    dsn: process.env.DSN_SENTRY,
     integrations: [
       
       new Sentry.Integrations.Http({ tracing: true }),

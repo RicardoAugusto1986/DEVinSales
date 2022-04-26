@@ -576,3 +576,43 @@
 25-04-2022 13:50:09 - [31merror[39m: [31mEmail ou senha inválidos[39m
 25-04-2022 13:50:09 - [35mhttp[39m: [35mPOST /api/v1/session 400 39 - 42.823 ms[39m
 [35m[39m
+26-04-2022 07:56:34 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 07:56:34 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 07:56:34 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 07:56:52 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 07:58:33 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 07:58:53 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:00:40 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:01:22 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:01:53 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:02:10 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:02:23 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:02:33 - [35mhttp[39m: [35mGET /api/v1/docs/ 304 - - 8.229 ms[39m
+[35m[39m
+26-04-2022 08:02:33 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 200 143980 - 10.724 ms[39m
+[35m[39m
+26-04-2022 08:02:33 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 304 - - 7.227 ms[39m
+[35m[39m
+26-04-2022 08:02:33 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 200 339540 - 15.028 ms[39m
+[35m[39m
+26-04-2022 08:02:33 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 200 1095130 - 18.882 ms[39m
+[35m[39m
+26-04-2022 08:02:33 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 200 628 - 1.672 ms[39m
+[35m[39m
+26-04-2022 08:02:34 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 2.536 ms[39m
+[35m[39m
+26-04-2022 08:02:47 - [32minfo[39m: [32mNão tem autorização para este recurso.[39m
+26-04-2022 08:02:47 - [35mhttp[39m: [35mDELETE /api/v1/user/0 403 61 - 2.771 ms[39m
+[35m[39m
+26-04-2022 08:03:11 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:11:09 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:11:50 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:11:53 - [32minfo[39m: [32mNão tem autorização para este recurso.[39m
+26-04-2022 08:11:53 - [35mhttp[39m: [35mDELETE /api/v1/user/0 403 61 - 11.190 ms[39m
+[35m[39m
+26-04-2022 08:12:48 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:13:17 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 08:13:20 - [32minfo[39m: [32mNão tem autorização para este recurso.[39m
+26-04-2022 08:13:20 - [35mhttp[39m: [35mDELETE /api/v1/user/0 403 61 - 19.938 ms[39m
+[35m[39m
+26-04-2022 08:13:59 - [32minfo[39m: [32mAplicação online[39m
