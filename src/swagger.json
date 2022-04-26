@@ -445,7 +445,7 @@
         "tags": [
           " Vendas "
         ],
-        "description": "Endpoint que busca todos usuario usuarios e suas vendas.",
+        "description": "Endpoint que busca todos usuarios.",
         "parameters": [],
         "responses": {
           "200": {

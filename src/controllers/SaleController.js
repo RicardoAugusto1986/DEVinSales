@@ -407,11 +407,14 @@ module.exports = {
 
   async showUserSaler(req, res) {
     // #swagger.tags = [' Vendas ']
-    // #swagger.description = 'Endpoint que busca todos usuario usuarios e suas vendas.'
+    // #swagger.description = 'Endpoint que busca todos usuarios.'
 
     try {
-      const findSaler = await User.findAll();
-console.log(findSaler)
+      const findSaler = await User.findAll({
+        attributes: ['name', 'email'],
+        
+      });
+
      
       Logger.info("Venda Localizada")
       return res.status(200).json(findSaler)
