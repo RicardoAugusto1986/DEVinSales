@@ -3,8 +3,9 @@ const express = require('express');
 const salesRoutes = express.Router();
 const { onlyCanAccessWith } = require("../../middlewares/auth");
 const { READ, WRITE, UPDATE, DELETE } = require("../../utils/constants/permissions");
-
-
+ 
+//rota extra que traz//
+salesRoutes.get('/usersales', onlyCanAccessWith([READ]), SaleController.showUserSaler);
 
 salesRoutes.get('/user/:id/sales', onlyCanAccessWith([READ]), SaleController.showSaler);
 salesRoutes.get('/user/:user_id/buy', onlyCanAccessWith([READ]), SaleController.showSalesByBuyer);

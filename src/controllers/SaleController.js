@@ -403,4 +403,24 @@ module.exports = {
       return res.status(400).send(error.message);
     }
   },
+
+
+  async showUserSaler(req, res) {
+    // #swagger.tags = [' Vendas ']
+    // #swagger.description = 'Endpoint que busca todos usuario usuarios e suas vendas.'
+
+    try {
+      const findSaler = await User.findAll();
+console.log(findSaler)
+     
+      Logger.info("Venda Localizada")
+      return res.status(200).json(findSaler)
+    }
+    catch (error) {
+      Logger.error("Houve um erro")
+      return res.status(400).send({ message: "Erro deconhecido!" })
+    }
+  },
+
+
 };
