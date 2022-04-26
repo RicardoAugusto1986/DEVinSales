@@ -1,6 +1,7 @@
 const Product = require("../models/Product");
 const { validateErrors } = require("../utils/functions");
 const { Op } = require("sequelize");
+const Logger = require("../config/logger");
 const {
   indexProductService,
   storeProductService,
@@ -38,7 +39,7 @@ module.exports = {
       const products = await indexProductService(name, price_min, price_max);
 
       if (products.length === 0) return res.status(204).send();
-
+Logger.info("Lista de produtos tazida com sucesso")
       return res.status(200).send({ products });
 
       /* #swagger.responses[200] = { 
@@ -48,6 +49,7 @@ module.exports = {
 
     } catch (error) {
       const message = validateErrors(error);
+      Logger.error("erro ao trazer dados do produtos")
       return res.status(400).send(message);
     }
   },
@@ -72,7 +74,7 @@ module.exports = {
               schema: { $ref: "#/definitions/ResProduct" },
               description: "Produto criado com sucesso!" 
        } */
-
+Logger.info("Produto criado com sucesso!")
       return res.status(200).send({
         message: "Produto criado com sucesso!",
         novoProduto: {
@@ -82,6 +84,7 @@ module.exports = {
       });
     } catch (error) {
       const message = validateErrors(error);
+      Logger.error("Erro ao criar produto")
       return res.status(400).send(message);
     }
   },
@@ -108,12 +111,15 @@ module.exports = {
       const { name, suggested_price } = req.body;
 
       if (!name) {
+        Logger.error("O campo name, não foi enviado.")
         throw new Error("O campo name, não foi enviado.");
       }
       if (!suggested_price) {
+        Logger.error("O campo suggested_price, não foi enviado")
         throw new Error("O campo suggested_price, não foi enviado.");
       }
       if (Number(suggested_price) <= 0) {
+        Logger.error("O campo suggested_price, deve ser maior que 0.")
         throw new Error("O campo suggested_price, deve ser maior que 0.");
       }
 
@@ -124,9 +130,10 @@ module.exports = {
       );
 
       if (!product) {
+        Logger.info("Produto não encontrado.")
         return res.status(404).send({ message: "Produto não encontrado." });
       }
-
+Logger.info("Produto atualizado com sucesso")
       return res.status(204).send();
     } catch (error) {
       const message = validateErrors(error);
@@ -161,11 +168,12 @@ module.exports = {
       );
 
       if (!updatedProduct) {
+        Logger.error("Não existe este produto")
         return res
           .status(404)
           .send({ message: `Não existe produto com o id ${id}` });
       }
-
+Logger.info(" Alteração realizada")
       return res.status(204).send();
     } catch (error) {
       const message = validateErrors(error);
@@ -188,14 +196,16 @@ module.exports = {
 
       const countSales = await countSalesByProductId(id)
       if (countSales > 0) {
+        Logger.error("Produto não pode ser deletado, produto já vendido.")
         throw new Error("Produto não pode ser deletado, produto já vendido.");
       }
       const product = await getProductById(Number(id));
       if (!product) {
+        Logger.error("Produto não encontrado")
         return res.status(404).send({ message: "Produto não encontrado." });
       }
       await product.destroy();
-
+Logger.info(" Produto deletado")
       return res.status(204).send();
     } catch (error) {
       const message = validateErrors(error);
