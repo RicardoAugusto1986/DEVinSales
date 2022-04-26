@@ -440,6 +440,38 @@
         }
       }
     },
+    "/api/v1/usersales": {
+      "get": {
+        "tags": [
+          " Vendas "
+        ],
+        "description": "Endpoint que busca todos usuario usuarios e suas vendas.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Você não tem autorização para este recurso."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/user/{id}/sales": {
       "get": {
         "tags": [
@@ -497,11 +529,11 @@
           "200": {
             "description": "OK"
           },
-          "201": {
-            "description": "Created"
-          },
           "204": {
             "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "403": {
             "description": "Forbidden",

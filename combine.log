@@ -616,3 +616,54 @@
 26-04-2022 08:13:20 - [35mhttp[39m: [35mDELETE /api/v1/user/0 403 61 - 19.938 ms[39m
 [35m[39m
 26-04-2022 08:13:59 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:05:58 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:06:07 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:06:11 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:06:11 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:06:34 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:06:42 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:07:18 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:09:05 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:09:05 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:12:32 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:12:32 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:12:41 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:12:41 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:13:18 - [32minfo[39m: [32mNão tem autorização para este recurso.[39m
+26-04-2022 19:13:18 - [35mhttp[39m: [35mGET /api/v1/user/1/sales 403 61 - 10.226 ms[39m
+[35m[39m
+26-04-2022 19:14:06 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:14:06 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:14:10 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:14:10 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:15:16 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:15:16 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:15:56 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:16:07 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:16:12 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:16:12 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:16:15 - [35mhttp[39m: [35mGET /api/v1/docs/ 200 3102 - 8.203 ms[39m
+[35m[39m
+26-04-2022 19:16:15 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-init.js 200 57205 - 3.577 ms[39m
+[35m[39m
+26-04-2022 19:16:15 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui.css 200 143980 - 22.553 ms[39m
+[35m[39m
+26-04-2022 19:16:15 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-standalone-preset.js 200 339540 - 13.447 ms[39m
+[35m[39m
+26-04-2022 19:16:15 - [35mhttp[39m: [35mGET /api/v1/docs/swagger-ui-bundle.js 200 1095130 - 15.313 ms[39m
+[35m[39m
+26-04-2022 19:16:16 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 1.542 ms[39m
+[35m[39m
+26-04-2022 19:16:16 - [35mhttp[39m: [35mGET /api/v1/docs/favicon-32x32.png 304 - - 1.810 ms[39m
+[35m[39m
+26-04-2022 19:16:31 - [32minfo[39m: [32mNão tem autorização para este recurso.[39m
+26-04-2022 19:16:31 - [35mhttp[39m: [35mGET /api/v1/usersales 403 61 - 2.858 ms[39m
+[35m[39m
+26-04-2022 19:17:47 - [32minfo[39m: [32mAcesso liberado[39m
+26-04-2022 19:17:47 - [35mhttp[39m: [35mPOST /api/v1/session 201 209 - 447.852 ms[39m
+[35m[39m
+26-04-2022 19:18:07 - [32minfo[39m: [32mVenda Localizada[39m
+26-04-2022 19:18:07 - [35mhttp[39m: [35mGET /api/v1/usersales 200 939 - 132.042 ms[39m
+[35m[39m
+26-04-2022 19:18:41 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:18:41 - [32minfo[39m: [32mAplicação online[39m
