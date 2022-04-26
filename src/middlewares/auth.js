@@ -1,6 +1,7 @@
 const { verify } = require("jsonwebtoken");
 const Role = require("../models/Role");
-const { OWNER } = require('../utils/constants/roles')
+const { OWNER } = require('../utils/constants/roles');
+const Logger = require("../config/logger");
 
 async function auth(req) {
   const { authorization } = req.headers;
@@ -11,6 +12,7 @@ async function auth(req) {
     const user = verify(authorization, process.env.SECRET);
     return user;
   } catch (error) {
+    Logger.info("Não tem autorização para este recurso.")
     return { message: "Você não tem autorização para este recurso." };
   }
 }
@@ -61,6 +63,7 @@ function onlyCanAccessWith(permissionsCanAccess) {
                 }
               }
             */
+              Logger.info("Não tem autorização para este recurso.")
       return res
         .status(403)
         .send({ message: "Você não tem autorização para este recurso." });
@@ -90,6 +93,7 @@ async function isOwner(req, res, next) {
   });
   const isOwner = roles.some(({ description }) => description === OWNER)
   if (!isOwner) {
+    Logger.info("Não tem autorização para este recurso.")
     return res
       .status(403)
       .send({ message: "Apenas usuarios com cargo de OWNER podem acessar este recurso." });
