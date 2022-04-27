@@ -616,3 +616,10 @@
 26-04-2022 08:13:20 - [35mhttp[39m: [35mDELETE /api/v1/user/0 403 61 - 19.938 ms[39m
 [35m[39m
 26-04-2022 08:13:59 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:46:37 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:46:37 - [32minfo[39m: [32mAplicação online[39m
+26-04-2022 19:46:50 - [35mhttp[39m: [35mGET /api/v1/usersales 404 155 - 17.632 ms[39m
+[35m[39m
+26-04-2022 19:47:09 - [32minfo[39m: [32mNão tem autorização para este recurso.[39m
+26-04-2022 19:47:09 - [35mhttp[39m: [35mDELETE /api/v1/user/0 403 61 - 5.847 ms[39m
+[35m[39m
