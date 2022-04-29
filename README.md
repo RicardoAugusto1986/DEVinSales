@@ -47,6 +47,6 @@ $ http://52.67.214.71/api/v1/users  (link insonmnia)
   "email": "Bertramvictor123@gmail.com",
   "password": "VictorD12."
 }
-
+## Feature em stangig para testes
 `
-
+$ http://18.230.196.141:3333/api/v1/usersales (link insonmnia)
