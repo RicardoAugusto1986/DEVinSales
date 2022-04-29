@@ -33,13 +33,13 @@ O projeto desenvolvido utiliza as seguintes tecnologias:
 ```bash
 # De produção 
 $ http://18.230.196.141/api/v1/docs/#/ (link swagger)
-$ http://18.230.196.141/api/v1/users (link insonmnia)
+$ http://18.230.196.141/api/v1/users 
 ```
 
 ```bash
 # De stanging 
 $ http://52.67.214.71/api/v1/docs/#/ (link swagger)
-$ http://52.67.214.71/api/v1/users  (link insonmnia)
+$ http://52.67.214.71/api/v1/users  
 ```
 ## Usuario teste de autenticação
 
