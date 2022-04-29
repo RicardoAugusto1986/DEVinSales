@@ -31,16 +31,22 @@ O projeto desenvolvido utiliza as seguintes tecnologias:
 
 
 ```bash
-# DE produção 
+# De produção 
 $ http://18.230.196.141/api/v1/docs/#/ (link swagger)
 $ http://18.230.196.141/api/v1/users (link insonmnia)
 ```
 
-
-
-
 ```bash
-# Clone o Repositório
-$ git clone https://github.com/DEVin-Teltec-BRy/M2P2-DEVinSales.git
+# De stanging 
+$ http://52.67.214.71/api/v1/docs/#/ (link swagger)
+$ http://52.67.214.71/api/v1/users  (link insonmnia)
 ```
+## Usuario teste de autenticação
+
+{
+  "email": "Bertramvictor123@gmail.com",
+  "password": "VictorD12."
+}
+
+`
 
