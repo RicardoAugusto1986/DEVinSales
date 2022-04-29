@@ -50,4 +50,4 @@ $ http://52.67.214.71/api/v1/users
 ## Feature em stangig para testes
 
 http:GET
-$ http://52.67.214.71/api/v1/usersales (link insonmnia)
+$ http://52.67.214.71/api/v1/usersales 
