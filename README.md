@@ -30,11 +30,11 @@ O projeto desenvolvido utiliza as seguintes tecnologias:
   -  São 2 url de teste dos endpoints.
 
 
-```bash
+
 # De produção 
 $ http://18.230.196.141/api/v1/docs/#/ (link swagger)
 $ http://18.230.196.141/api/v1/users (link insonmnia)
-```
+
 
 ```bash
 # De stanging 
